@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "CdnAssetsLoading";
+}
+<h1>@ViewData["Title"]</h1>
+
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <div class="imageBlock">
+            <a href="@item" target="_blank"><img class="thumb" src="@item" alt="images" /></a><br />
+            <div class="deleteDiv"><img class="deleteIcon" src="~/Images/deleteImage.png" title="Delete Image" onclick="deleteImage('@item');" /></div>
+        </div>
+    }
+
+    foreach (var item in Model)
+    {
+        <div class="blobEndpoint">
+            <a>@item</a>
+        </div>
+    }
+}

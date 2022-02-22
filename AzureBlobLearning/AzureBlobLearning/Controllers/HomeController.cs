@@ -21,6 +21,7 @@ namespace AzureBlobLearning.Controllers
 			try
 			{
 				var allBlobs = await _azureBlobService.ListAsync();
+
 				return View(allBlobs);
 			}
 			catch (Exception ex)
